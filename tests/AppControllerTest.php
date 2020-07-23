@@ -49,7 +49,7 @@ class AppControllerTest extends WebTestCase
     public function testPackageV2WithLongNameMatches()
     {
         $client = static::createClient();
-        $client->request('GET', '/api/packages/fooooooooooooooooooooo/bar/');
+        $client->request('GET', '/api/v2/packages/fooooooooooooooooooooo/bar/');
 
         $this->assertResponseIsSuccessful();
     }
